@@ -1,0 +1,21 @@
+{
+    "apiVersion": "v1",
+    "data": {
+        "ed25519_master_id_public_key": "== ed25519v1-public: type0 ==\u0000\u0000\u0000�54�!z'h�f���\u0018�|\u0008�\ruoS�ƇF�[��l�",
+        "ed25519_master_id_secret_key": "== ed25519v1-secret: type0 ==\u0000\u0000\u0000�\u0010��eȦ=��Y�����:\u0008~\u0007�u�j�{�){�Mи)\u000b2-9O���\u0010����\u0006\u001c��\\]9Ę\u0003��!��",
+        "ed25519_signing_cert": "== ed25519v1-cert: type4 ==\u0000\u0000\u0000\u0000\u0000\u0001\u0004\u0000\u0006M,\u0001\u0017�Ƣ��-��B�4����\u003c\u000fd��L�.ꘛ�q���\u0001\u0000 \u0004\u0000�54�!z'h�f���\u0018�|\u0008�\ruoS�ƇF�[��l���\\�v\u001f�b��%Q�8�q_���A��-~1~��-�D9����ߟ\u000e\u0019�\u000bY~08Y��9�UE�ɀ����-\u000f",
+        "ed25519_signing_secret_key": "== ed25519v1-secret: type4 ==\u0000\u0000\u0000�e��to\u001bt�M7 �nb2�$P\n��}r�B{�^�j_~��[Q\u0011)���\t��@p�\"�\\�G��p����UT��",
+        "secret_id_key": "-----BEGIN RSA PRIVATE KEY-----\nMIICXQIBAAKBgQDStuc7rKnVFslTCbiInURC/frKe9wyzYIYx1oNzWSb5iOxzclA\nUQg+YlUeChrd329oFvKOngs7mZDps3p3RGW9cqjXtznhOwrZGp8grMd0HaOeu5u9\n1BnMiQxiRrbHeEMgu3zwKxRV7JQ2XnA8+gAMZ0OZ/IhOiHYrYhKA7YW+rQIDAQAB\nAoGBAMqPi4BhPq4bBpRt3thtnoZsE1/9a7PmvS7GzTpBfXsk5KFzewj6HNujucFz\n41nxBe7hSHFzWscDnDwdDhiDRuz10lpiYwkVHPF0ODoMXyCE4/RmPc5OpDWTYOx2\nloFXIQ0nDTOc6HpShaEp9kxmZTBPS+FIH/vWV7r4EUT3+FhhAkEA8in4cjoL0/Pe\nOjr1Wlgtc6RK8dywkq7CKxPK7L9c0cU9p2Oj1Ug59e6xUCwUdS6ORXfyhAjbi5P6\n9I4wVS271QJBAN7A7zxc5G7GCtZGT2DhI0WCzWjjvP0kbvmjkZZgqOAHPe6pONrI\n6ARASOgOUxOLOJKBkDhBBNGgRV8cbM52m3kCQHskWJBNcCJRylm2DXnpiQNbMjkX\nTjro3xfksrX9AYgyUo3CH1efqMmknUn1gFmuWO5+djYqAupRT7X4cB+AaBkCQGiz\nHr+smeJHS8ize5P5vm5psMrgYHBLs6266C9ad4X1YXLQL10GmaeF377THNFO2uRh\n6bvHM9CkGHdAERRqQ2ECQQC8x7GFI3tUBmcMvWPScWI5Mnoj/cSkfIlTJ3qT6q4U\nFZLwjebmNp+A7hoosEDmZKujGzpzSeVhPGJcFkQrKeFC\n-----END RSA PRIVATE KEY-----\n",
+        "secret_onion_key": "-----BEGIN RSA PRIVATE KEY-----\nMIICWwIBAAKBgQCgCwSMkNuMHuDFJRYiL+7P5w/rQ2ds/PgwMNXftvzyI1Fmf6aD\nmSH35+Trdr+4XWgiklbONZrCrZjFo0+t1gmEPSpQdlw1RtdJ74A8YUlTRqBE9r5E\nKkDxAn2pWvcEqVsWEmGCmPXK8P8WhuF74/L6ffsxImSwlIWa7uXpw+daTwIDAQAB\nAoGADY+Bbiuj/qZrIyk2S+VF1eXdKnEGpWx11xd8N714h0fI0OeGA2aJQ0kp0223\nZva7KRq/Mi/GkjJFXJGu4areGW0Iv3CnDxovcICGyFuSizyxJCkTCkxZAgxPEwPy\noo7i0URVAxbbURkU27YPBekGgXduMN6GX6v02KhudIvbRJECQQDQE1pxjiVqmIV8\n4KMRLTei5bnmssI+dGSIzllEKzVnaivNQFkuH4UbshQ96rZM9Hs++C0rCkVaXI5V\nC61FIC8ZAkEAxOeMD0sB7S9551asD0vJD7nzYThM+qEmNU+jTPstphoHxJYlsG5c\n3Y4ROcNHOWO2bqZuMk4xZquUWzIbMh7JpwJAYAQuPixb876CCsgWN3zoKZFcoapn\nnC5VnhOqeZx+vkPuBn7lKDV/VPJuCMxgZ06B+OLI5Q2OR05il7gVsspRMQJAckKj\nJeSy034vUS0cXyvtGrEfKBVRpkaJM3ppGqzPCookY9F1QXJpdS+Rk2FcHVNdc8wk\nOhDh3eBHELx8x5LSFQJAHnecIN/bv7Q9oeDxY3jE8n0EOyfnD840sfjI0iGCCARo\nx9kn5HzCMPbUG1XN6uewQnvAlhFZNhkjWif2Uuainw==\n-----END RSA PRIVATE KEY-----\n",
+        "secret_onion_key_ntor": "== c25519v1: onion ==\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00008�R%�\u0026��T`\u001f��\u0013����\n��$�9R�j��we�gT`�\u0007��\u003e!\u0000\u001c\u0005�c�t�%�F�|2�[:�a�K"
+    },
+    "kind": "ConfigMap",
+    "metadata": {
+        "creationTimestamp": "2017-01-15T14:58:59Z",
+        "name": "torkeys-a",
+        "namespace": "default",
+        "resourceVersion": "1310128",
+        "selfLink": "/api/v1/namespaces/default/configmaps/test",
+        "uid": "2523c382-db33-11e6-b424-525400000003"
+    }
+}

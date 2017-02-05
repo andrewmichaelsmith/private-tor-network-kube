@@ -1,0 +1,48 @@
+Ordering:
+
+da-1,da-2,da-3
+relay,exit,client
+
+So basically - it's all about the DAs
+
+--
+
+ALL
+
+Nickname
+Address (Though can't we use 0.0.0.0?)
+ControlPort (but isn't it the same for everyone?)
+HashedControlPassword (again, same for everyone)
+
+DA
+
+cat /etc/tor/torrc.da >> /etc/tor/torrc
+OrPort
+DirPort
+ExitPolicy
+tor-gencert STUFF
+
+(!!) torrc.da FOR OTHERS
+
+RELAY/EXIT
+OrPort
+DirPort
+ExitPolicy
+
+EVERYONE gets torrcd.da which I guess is what tells them where the DAs are
+
+--
+
+Notes..
+
+1) In his world DAs aren't scalable (fine by me!)
+
+So can we just do all the generation of config files offline beforehand?
+To begin with can't I just hardcode that stuff???
+
+2) he uses IPs everywhere, we should use hostnames (which means we can hard code that shti!! yayy!!!!!)
+
+
+
+
+
