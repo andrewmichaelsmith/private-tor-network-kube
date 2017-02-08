@@ -1,0 +1,17 @@
+kind: "Service"
+apiVersion: "v1"
+metadata: 
+  name: "$name"
+spec: 
+  selector: 
+    app: "tor-$name"
+  type: "ClusterIP"
+  ports: 
+    - protocol: "TCP"
+      port: 7000
+      targetPort: 7000
+      name: "dir"
+    - protocol: "TCP"
+      port: 5000
+      targetPort: 5000
+      name: "or"

@@ -1,0 +1,13 @@
+#!/bin/sh
+# version 2
+# https://github.com/antitree/private-tor-network/blob/master/scripts/da_fingerprint
+IP=$1
+TOR_NICK=$(grep "^Nick" torrc | awk -F ' ' '{print $2}')
+AUTH=$(grep "fingerprint" authority_certificate | awk -F " " '{print $2}')
+NICK=$(cat fingerprint| awk -F " " '{print $1}')
+RELAY=$(cat fingerprint|awk -F " " '{print $2}')
+SERVICE=$(grep "dir-address" keys/* | awk -F " " '{print $2}')
+
+TORRC="DirAuthority $TOR_NICK orport=7000 no-v2 v3ident=$AUTH $IP:7000 $RELAY"
+
+echo $TORRC

@@ -1,0 +1,30 @@
+TestingTorNetwork 1
+
+PathsNeededToBuildCircuits 0.25
+TestingDirAuthVoteExit *
+TestingDirAuthVoteHSDir *
+V3AuthNIntervalsValid 2
+
+## Always On Testing Options ##
+# We enable TestingDirAuthVoteGuard to avoid Guard stability requirements
+TestingDirAuthVoteGuard *
+# We set TestingMinExitFlagThreshold to 0 to avoid Exit bandwidth requirements
+TestingMinExitFlagThreshold 0
+# VoteOnHidServDirectoriesV2 needs to be set for HSDirs to get the HSDir flag
+#Default VoteOnHidServDirectoriesV2 1
+
+# Private tor network configuration
+RunAsDaemon 0
+ConnLimit 60
+ShutdownWaitLength 0
+#PidFile /var/lib/tor/pid
+Log info stdout
+ProtocolWarnings 1
+SafeLogging 0
+DisableDebuggerAttachment 0
+
+DirPortFrontPage /usr/share/doc/tor/tor-exit-notice.html #TODO doesn't exist
+
+ORPort 5000
+DirPort 7000
+ExitPolicy accept *:*

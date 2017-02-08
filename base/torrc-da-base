@@ -1,3 +1,6 @@
+##
+## https://github.com/antitree/private-tor-network/blob/53609ddd8d90cc046e884e4bd3592a85f7ced3b0/config/torrc.da
+##
 AuthoritativeDirectory 1
 V3AuthoritativeDirectory 1
 
