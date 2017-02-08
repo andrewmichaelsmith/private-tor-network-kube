@@ -55,8 +55,8 @@ make_relay() {
 	kubectl -s http://192.168.122.254:8080 delete secret generic relay-torrc
 	kubectl -s http://192.168.122.254:8080 create secret generic relay-torrc --from-file torrc
 
-	kubectl -s http://192.168.122.254:8080 delete -f relay.yml
-	kubectl -s http://192.168.122.254:8080 create -f relay.yml
+	kubectl -s http://192.168.122.254:8080 delete -f ../relay.yml
+	kubectl -s http://192.168.122.254:8080 create -f ../relay.yml
 
 	cd ..
 }
