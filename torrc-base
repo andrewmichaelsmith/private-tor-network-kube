@@ -28,3 +28,5 @@ DirPortFrontPage /usr/share/doc/tor/tor-exit-notice.html #TODO doesn't exist
 ORPort 5000
 DirPort 7000
 ExitPolicy accept *:*
+
+SOCKSPort 0.0.0.0:9050
