@@ -19,10 +19,9 @@ spec:
         app: tor-$name
     spec:
       containers:
-      - image: quay.io/andysmith/tor-relay:0.2.8.12
-        imagePullPolicy: Always
-        #command: ["sleep", "999999999999"]
-        command: ["sh", "/entry/docker-entrypoint.sh", "DA"]
+      - image: quay.io/andysmith/private-tor:latest
+        imagePullPolicy: IfNotPresent
+        args: ["DA"]
         name: tor-$name
         ports:
         - containerPort: 9030

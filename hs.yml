@@ -19,9 +19,9 @@ spec:
         app: tor-hs
     spec:
       containers:
-      - image: quay.io/andysmith/tor-relay:0.2.8.12
+      - image: quay.io/andysmith/private-tor:latest
         imagePullPolicy: IfNotPresent
-        command: ["sh", "/entry/docker-entrypoint.sh", "HS"]
+        args: ["HS"]
         name: tor-hs
         ports:
         - containerPort: 7000

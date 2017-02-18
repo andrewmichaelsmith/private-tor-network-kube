@@ -32,10 +32,10 @@ make_da () {
 	#For --list-fignerpinrt
 	cp ../torrc-base torrc
 
-	sudo docker run -u $(id -u) --entrypoint=sh -v `pwd`:`pwd` --workdir=`pwd` -ti quay.io/andysmith/tor-relay:0.2.8.12 \
+	sudo docker run -u $(id -u) --entrypoint=sh -v `pwd`:`pwd` --workdir=`pwd` -ti quay.io/andysmith/private-tor:latest \
 	-c "echo password | tor-gencert --create-identity-key --passphrase-fd o"
 
-	sudo docker run -u $(id -u) -v `pwd`:`pwd` --workdir=`pwd` -ti quay.io/andysmith/tor-relay:0.2.8.12 \
+	sudo docker run -u $(id -u) -v `pwd`:`pwd` --workdir=`pwd` -ti quay.io/andysmith/private-tor:latest \
 	--list-fingerprint --orport 1 --dirserver "x 127.0.0.1:1 ffffffffffffffffffffffffffffffffffffffff" --datadirectory .
 
 	echo -e "\nNickname $name" >> torrc
@@ -78,14 +78,6 @@ make_hs() {
 	cd ..
 }
 
-
-	
-	
-	
-
-##Hack until we bake it in
-kubectl delete configmap tor-entry
-kubectl create configmap tor-entry --from-file docker-entrypoint.sh
 
 rm da_list
 

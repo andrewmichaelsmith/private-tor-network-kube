@@ -19,9 +19,9 @@ spec:
         app: tor-relay
     spec:
       containers:
-      - image: quay.io/andysmith/tor-relay:0.2.8.12
-        imagePullPolicy: Always
-        command: ["sh", "/entry/docker-entrypoint.sh", "RELAY"]
+      - image: quay.io/andysmith/private-tor:latest
+        imagePullPolicy: IfNotPresent
+        args: ["RELAY"]
         name: tor-relay
         ports:
         - containerPort: 7000
