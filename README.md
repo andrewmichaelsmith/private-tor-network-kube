@@ -1,15 +1,15 @@
-## Private Tor Network on Kubernetes
+# Private Tor Network on Kubernetes
 
-# Dependencies
+## Dependencies
 
 - kubectl configured to point at the cluster + namespace you want
 - docker client/server available (we need to generate the keys 
 
-# Set up
+## Set up
 
 - ./setup.sh 
 
-# Use
+## Use
 
 Exposes a remote relay locally for use over SOCKS
 
@@ -17,3 +17,6 @@ Exposes a remote relay locally for use over SOCKS
 - curl --socks5 localhost:9050 http://github.com
 - curl --socks5-hostname localhost:9050 $(./findhs.hs)
 
+## Sources
+
+Based on [antitree/private-tor-network](https://github.com/antitree/private-tor-network)
