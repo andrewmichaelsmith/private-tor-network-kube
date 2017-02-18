@@ -13,7 +13,8 @@ set -x
 ### 8. Create ConfigMaps for certs (1), keys (2), torrc (7)
 ### 9. Create da1, da2, da3 Deployment
 ### 10. Using da_list create torrc for relays
-### 11. Create relay (1 deployment, scaled to multiple relays)
+### 11. Create relay (1 deployment, scaled to multiple instances)
+### 12. Create relay/hidden service
 
 
 make_da () {
@@ -48,11 +49,12 @@ make_da () {
 }
 
 make_relay() {
+	mkdir -p relay
 	cd relay
 	cp ../torrc-base torrc
 	cat ../da_list >> torrc
 
-	kubectl delete secret generic relay-torrc
+	kubectl delete secret relay-torrc
 	kubectl create secret generic relay-torrc --from-file torrc
 
 	kubectl delete -f ../relay.yml
@@ -60,6 +62,24 @@ make_relay() {
 
 	cd ..
 }
+
+make_hs() {
+	mkdir -p hs
+	cd hs
+	cp ../torrc-base torrc
+	cat ../da_list >> torrc
+
+	kubectl delete secret hs-torrc
+	kubectl create secret generic hs-torrc --from-file torrc
+
+	kubectl delete -f ../hs.yml
+	kubectl create -f ../hs.yml
+
+	cd ..
+}
+
+
+	
 	
 	
 
@@ -94,3 +114,5 @@ done
 
 
 make_relay
+
+make_hs

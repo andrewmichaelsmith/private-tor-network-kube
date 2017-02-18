@@ -17,8 +17,14 @@ case ${1} in
 		ip=$(ip -o -4 addr list eth0 | awk '{print $4}' | cut -d/ -f1)
 		echo -e "\nAddress $ip" >> /etc/tor/torrc
 		;;
+	HS)
+		ip=$(ip -o -4 addr list eth0 | awk '{print $4}' | cut -d/ -f1)
+		echo -e "\nAddress $ip" >> /etc/tor/torrc
+		echo -e "\nHiddenServiceDir /root/.tor/hs/" >> /etc/tor/torrc
+		echo -e "\nHiddenServicePort 80 127.0.0.1:80" >> /etc/tor/torrc
+		;;
 	*)
-		echo "Expected arg DA or RELAY"
+		echo "Unexpected arg to $0"
 		exit 1
 		;;
 esac		

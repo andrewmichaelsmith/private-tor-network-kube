@@ -1,0 +1,54 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: tor-hs
+  name: tor-hs
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tor-hs
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: tor-hs
+    spec:
+      containers:
+      - image: quay.io/andysmith/tor-relay:0.2.8.12
+        imagePullPolicy: IfNotPresent
+        command: ["sh", "/entry/docker-entrypoint.sh", "HS"]
+        name: tor-hs
+        ports:
+        - containerPort: 7000
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        volumeMounts:
+        - mountPath: /etc/tor/
+          name: torrc
+        - mountPath: /entry
+          name: entry
+      - image: nginx:1.11.10-alpine
+        imagePullPolicy: IfNotPresent
+        name: nginx
+        ports:
+        - containerPort: 80
+          protocol: TCP
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+        - name: torrc
+          secret:
+            secretName: hs-torrc
+        - name: entry
+          configMap:
+            name: tor-entry
+            defaultMode: 0755
+

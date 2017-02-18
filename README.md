@@ -15,4 +15,5 @@ Exposes a remote relay locally for use over SOCKS
 
 - ./use.sh
 - curl --socks5 localhost:9050 http://github.com
+- curl --socks5-hostname localhost:9050 $(./findhs.hs)
 
