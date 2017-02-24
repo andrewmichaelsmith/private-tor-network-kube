@@ -26,6 +26,8 @@ spec:
         ports:
         - containerPort: 7000
           protocol: TCP
+        - containerPort: 9051
+          protocol: TCP
         resources: {}
         terminationMessagePath: /dev/termination-log
         volumeMounts:
