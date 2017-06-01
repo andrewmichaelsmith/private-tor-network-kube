@@ -35,7 +35,7 @@ make_da () {
 	sudo docker run -u $(id -u) --entrypoint=sh -v `pwd`:`pwd` --workdir=`pwd` -ti quay.io/andysmith/private-tor:latest \
 	-c "echo password | tor-gencert --create-identity-key --passphrase-fd o"
 
-	sudo docker run -u $(id -u) -v `pwd`:`pwd` --workdir=`pwd` -ti quay.io/andysmith/private-tor:latest \
+	sudo docker run -u $(id -u) --entrypoint=tor -v `pwd`:`pwd` --workdir=`pwd` -ti quay.io/andysmith/private-tor:latest \
 	--list-fingerprint --orport 1 --dirserver "x 127.0.0.1:1 ffffffffffffffffffffffffffffffffffffffff" --datadirectory .
 
 	echo -e "\nNickname $name" >> torrc
