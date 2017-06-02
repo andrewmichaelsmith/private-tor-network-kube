@@ -2,8 +2,9 @@
 
 ## Dependencies
 
-- kubectl configured to point at the cluster + namespace you want
-- docker client/server available (we need to generate the keys 
+- a kubernetes cluster (tested against 1.6)
+- kubectl configured to point at the cluster + namespace at that cluster
+- docker client/server available (we use a docker conatiner to generate the keys)
 
 ## Set up
 
