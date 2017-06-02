@@ -31,8 +31,6 @@ spec:
         volumeMounts:
         - mountPath: /etc/tor/
           name: torrc
-        - mountPath: /entry
-          name: entry
       - image: nginx:1.11.10-alpine
         imagePullPolicy: IfNotPresent
         name: nginx
@@ -47,8 +45,4 @@ spec:
         - name: torrc
           secret:
             secretName: hs-torrc
-        - name: entry
-          configMap:
-            name: tor-entry
-            defaultMode: 0755
 

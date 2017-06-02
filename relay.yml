@@ -33,8 +33,6 @@ spec:
         volumeMounts:
         - mountPath: /etc/tor/
           name: torrc
-        - mountPath: /entry
-          name: entry
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       securityContext: {}
@@ -43,8 +41,4 @@ spec:
         - name: torrc
           secret:
             secretName: relay-torrc
-        - name: entry
-          configMap:
-            name: tor-entry
-            defaultMode: 0755
 

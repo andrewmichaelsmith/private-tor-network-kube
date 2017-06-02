@@ -37,8 +37,6 @@ spec:
           name: id
         - mountPath: /keys
           name: keys
-        - mountPath: /entry
-          name: entry
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       securityContext: {}
@@ -53,8 +51,4 @@ spec:
         - name: id
           secret:
             secretName: $name-id
-        - name: entry
-          configMap:
-            name: tor-entry
-            defaultMode: 0755
 
